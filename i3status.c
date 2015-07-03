@@ -411,15 +411,14 @@ int main(int argc, char *argv[]) {
         CFG_END()};
 
     cfg_opt_t mpd_opts[] = {
-            CFG_STR("host", "localhost", CFGF_NONE),
-            CFG_INT("port", 6600, CFGF_NONE),
-            CFG_STR("password", "", CFGF_NONE),
-            CFG_STR("format", "%artist - %title", CFGF_NONE),
-            CFG_CUSTOM_ALIGN_OPT,
-            CFG_CUSTOM_COLOR_OPTS,
-            CFG_CUSTOM_MIN_WIDTH_OPT,
-            CFG_END()
-    };
+        CFG_STR("host", "localhost", CFGF_NONE),
+        CFG_INT("port", 6600, CFGF_NONE),
+        CFG_STR("password", "", CFGF_NONE),
+        CFG_STR("format", "%artist - %title", CFGF_NONE),
+        CFG_CUSTOM_ALIGN_OPT,
+        CFG_CUSTOM_COLOR_OPTS,
+        CFG_CUSTOM_MIN_WIDTH_OPT,
+        CFG_END()};
 
     cfg_opt_t opts[] = {
         CFG_STR_LIST("order", "{}", CFGF_NONE),
@@ -438,7 +437,7 @@ int main(int argc, char *argv[]) {
         CFG_SEC("ddate", ddate_opts, CFGF_NONE),
         CFG_SEC("load", load_opts, CFGF_NONE),
         CFG_SEC("cpu_usage", usage_opts, CFGF_NONE),
-                CFG_SEC("mpd", mpd_opts, CFGF_MULTI),
+        CFG_SEC("mpd", mpd_opts, CFGF_MULTI),
         CFG_END()};
 
     char *configfile = NULL;
